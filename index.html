@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feel Calm Again — TheOld952 Anxiety Detox System</title>
+  <meta name="description" content="Start with a free guided journal, then unlock a proven system to break anxiety loops in minutes. Over 5,000+ people started their anxiety detox journey with TheOld952 this week." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/jpeg" href="theold.jpg">
+
+  <style>
+    /* ─── RESET & BASE ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #F5F2EC;
+      color: #1A1A1A;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── DESIGN TOKENS ─── */
+    :root {
+      --cream:       #F7F5F2; /* Soft greyish cream */
+      --cream-dark:  #F0EDE7;
+      --obsidian:    #1A1A1A; /* From the silhouette */
+      --blush:       #D4A5A5; /* From the flowers */
+      --blush-light: #E8CFCF;
+      --blush-dark:  #A67C7C;
+      --mist:        #94999C; /* From the soft clouds/textures */
+      --floral-red:  #B67373; /* Deeper floral accent */
+      --muted:       #666666;
+      --border:      rgba(148,153,156,0.15);
+    }
+
+    /* ─── TYPOGRAPHY ─── */
+    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; line-height: 1.15; }
+
+    /* ─── LAYOUT ─── */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+    .section { padding: 10rem 0; }
+
+    /* ─── ANIMATIONS ─── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0);    }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50%       { transform: translateY(-12px); }
+    }
+    @keyframes shimmer {
+      0%   { background-position: -200% center; }
+      100% { background-position:  200% center; }
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.4; }
+    }
+    .fade-up { animation: fadeUp 0.9s ease-out both; }
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.25s; }
+    .delay-3 { animation-delay: 0.4s; }
+    .delay-4 { animation-delay: 0.55s; }
+
+    /* ─── BUTTONS ─── */
+    .btn {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      border-radius: 4px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.35s ease;
+    }
+    .btn-primary {
+      background: var(--obsidian);
+      color: var(--cream);
+    }
+    .btn-primary:hover {
+      background: #2d2d2d;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(26,26,26,0.25);
+    }
+    .btn-sage {
+      background: var(--blush);
+      color: white;
+    }
+    .btn-sage:hover {
+      background: var(--blush-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(166,124,124,0.35);
+    }
+    .btn-gold {
+      background: linear-gradient(135deg, var(--blush), var(--blush-light));
+      color: white;
+      box-shadow: 0 4px 20px rgba(212,165,165,0.3);
+    }
+    .btn-gold:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(212,165,165,0.45);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--obsidian);
+      border: 1.5px solid var(--obsidian);
+    }
+    .btn-outline:hover {
+      background: var(--obsidian);
+      color: var(--cream);
+    }
+
+    /* ═══════════════════════════════════════════
+       HEADER
+    ═══════════════════════════════════════════ */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(253,251,247,0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0.7rem 0;
+    }
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+    .logo-img {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1.5px solid var(--blush);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .logo-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--obsidian);
+      letter-spacing: 0.5px;
+    }
+    .logo span { color: var(--blush-dark); }
+    .header-cta {
+      font-size: 0.85rem;
+      padding: 0.6rem 1.5rem;
+    }
+
+    /* ═══════════════════════════════════════════
+       HERO
+    ═══════════════════════════════════════════ */
+    #hero {
+      background: var(--cream);
+      padding: 6rem 0 9rem; /* Reduced top padding to close the gap with the banner */
+      overflow: hidden;
+      position: relative;
+    }
+    #hero::before {
+      display: none; /* Removed the light gradient layer that might look like a 'white layer' */
+    }
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--blush-dark);
+      margin-bottom: 1.5rem;
+      padding: 0.4rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+    }
+    .hero-title {
+      font-size: clamp(3rem, 6.5vw, 4.5rem); /* Increased from 2.5rem - 3.8rem */
+      font-weight: 700;
+      color: var(--obsidian);
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+    }
+    .hero-title em {
+      font-style: italic;
+      color: var(--blush-dark);
+    }
+    .hero-sub {
+      font-size: 1.25rem; /* Increased from 1.15rem */
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+      max-width: 520px;
+    }
+    .hero-btns {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .hero-social-proof {
+      margin-top: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .proof-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--blush);
+      animation: pulse-dot 2s ease infinite;
+    }
+    /* Hero book stack */
+    .hero-books {
+      position: relative;
+      height: 650px; /* Increased from 520px */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: none !important; /* Ensure no background on container */
+    }
+    .hero-books *, .hero-books::after, .hero-books::before, 
+    .hero-book::after, .hero-book::before,
+    #hero *::after, #hero *::before {
+      display: none !important;
+      content: none !important;
+      background: transparent !important;
+      backdrop-filter: none !important;
+      box-shadow: none !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+    }
+    /* Reinstate book display which was caught in the wildcard above */
+    .hero-book, .hero-book img {
+      display: block !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+    .hero-book {
+      position: absolute;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.12); /* Reduced shadow intensity */
+    }
+    .hero-book img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .book-main {
+      width: 320px; height: 448px; /* Enormous increase */
+      z-index: 3;
+      animation: float 5s ease-in-out infinite;
+    }
+    .book-left {
+      width: 260px; height: 364px;
+      z-index: 2;
+      left: 0%;
+      top: 50%; transform: translateY(-50%) rotate(-8deg);
+      opacity: 0.9;
+    }
+    .book-right {
+      width: 250px; height: 350px;
+      z-index: 2;
+      right: 0%;
+      top: 50%; transform: translateY(-50%) rotate(8deg);
+      opacity: 0.9;
+    }
+
+    /* ═══════════════════════════════════════════
+       PAIN SECTION
+    ═══════════════════════════════════════════ */
+    #pain {
+      background: #fff;
+      color: var(--obsidian);
+      padding: 10rem 0;
+    }
+    .pain-inner { max-width: 700px; margin: 0 auto; text-align: center; }
+    .pain-heading {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      color: var(--obsidian);
+      margin-bottom: 2rem;
+    }
+    .pain-heading em { font-style: italic; color: var(--blush); }
+    .pain-intro {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin-bottom: 3rem;
+      line-height: 1.8;
+    }
+    .pain-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      text-align: left;
+      margin-bottom: 3rem;
+    }
+    .pain-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.1rem 1.5rem;
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 1rem;
+      color: var(--obsidian);
+      transition: background 0.3s;
+    }
+    .pain-list li:hover { background: var(--cream-dark); }
+    .pain-icon {
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    /* ═══════════════════════════════════════════
+       SOLUTION SECTION
+    ═══════════════════════════════════════════ */
+    #solution {
+      background: var(--cream-dark);
+      padding: 6rem 0;
+    }
+    .solution-inner { max-width: 750px; margin: 0 auto; text-align: center; }
+    .section-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--blush-dark);
+      margin-bottom: 1rem;
+    }
+    .solution-heading {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--obsidian);
+      margin-bottom: 1.5rem;
+    }
+    .solution-sub {
+      font-size: 1.1rem;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 3rem;
+    }
+    .solution-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .pillar {
+      padding: 2rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      text-align: center;
+      transition: all 0.35s ease;
+    }
+    .pillar:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.07);
+    }
+    .pillar-img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      margin-bottom: 1.5rem;
+      border-radius: 12px; /* Changed to rounded corners for a more modern look than circles */
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    .pillar h4 {
+      font-size: 1rem;
+      color: var(--obsidian);
+      margin-bottom: 0.5rem;
+    }
+    .pillar p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
+
+    /* FUNNEL PATH */
+    .funnel-path {
+      margin-top: 3rem;
+      padding: 1.5rem 2rem;
+      background: var(--obsidian);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+    .funnel-step {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.8);
+      font-weight: 500;
+    }
+    .funnel-arrow { color: var(--blush-light); font-size: 1.1rem; }
+    .funnel-step.accent { color: var(--blush); font-weight: 600; }
+
+    /* ═══════════════════════════════════════════
+       PRODUCTS — 3-TIER
+    ═══════════════════════════════════════════ */
+    #products {
+      background: var(--cream);
+      padding: 6rem 0;
+    }
+    .products-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    .products-heading {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--obsidian);
+      margin-bottom: 1rem;
+    }
+    .products-sub {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 550px;
+      margin: 0 auto;
+    }
+
+    /* Product Cards Grid */
+    .products-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2.5rem;
+      align-items: stretch;
+      max-width: 1250px; /* Expands to fit 'Full Fit' cards */
+      margin: 0 auto;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.4s ease;
+      position: relative;
+      padding-top: 36px; /* Uniform space for ribbon across ALL cards */
+    }
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 25px 60px rgba(0,0,0,0.1);
+    }
+
+    /* Tier badges */
+    .tier-badge {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      z-index: 2;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 0.35rem 0.85rem;
+      border-radius: 100px;
+    }
+    .tier-free  { background: rgba(253,251,247,0.92); color: var(--sage-dark); border: 1px solid var(--sage-light); }
+    .tier-mid   { background: rgba(135,145,125,0.12); color: var(--sage-dark); border: 1px solid var(--sage); }
+    .tier-flagship { background: var(--gold); color: white; }
+
+    /* Flagship highlight */
+    .product-card.flagship {
+      border-color: var(--gold);
+      box-shadow: 0 8px 30px rgba(197,160,89,0.15);
+    }
+    .flagship-ribbon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: var(--blush);
+      color: white;
+      text-align: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 0.55rem;
+      z-index: 10;
+    }
+
+    .product-image-wrap {
+      position: relative;
+      background: var(--cream-dark);
+      padding: 3rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 480px; /* Massive increase for 'Full Fit' */
+    }
+    .product-image-wrap img {
+      max-width: 280px; /* Increased for Full Fit */
+      max-height: 400px;
+      object-fit: contain;
+      filter: drop-shadow(0 30px 60px rgba(0,0,0,0.25));
+      transition: transform 0.5s ease;
+    }
+    .product-card:hover .product-image-wrap img {
+      transform: translateY(-6px) scale(1.03);
+    }
+
+    .product-body {
+      padding: 1.75rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .product-price {
+      font-size: 2rem;
+      font-weight: 700;
+      font-family: 'Playfair Display', serif;
+      color: var(--obsidian);
+      margin-bottom: 0.4rem;
+    }
+    .product-price .price-label {
+      font-size: 0.8rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      color: var(--muted);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    .product-name {
+      font-size: 1.4rem; /* Larger titles */
+      color: var(--obsidian);
+      margin-bottom: 0.5rem;
+    }
+    .product-tagline {
+      font-size: 0.88rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 1.25rem;
+      line-height: 1.5;
+    }
+    .product-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      margin-bottom: 1.5rem;
+      flex: 1;
+    }
+    .product-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+    .product-features li .check {
+      color: var(--sage);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 0.05rem;
+    }
+    .product-transform {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--sage-dark);
+      letter-spacing: 0.5px;
+      margin-bottom: 1.25rem;
+      padding: 0.6rem 1rem;
+      background: rgba(135,145,125,0.08);
+      border-radius: 6px;
+      border-left: 3px solid var(--sage);
+    }
+    .product-cta { width: 100%; text-align: center; font-size: 0.9rem; padding: 0.9rem 1.5rem; border-radius: 6px; }
+
+    /* ═══════════════════════════════════════════
+       VALUE COMPARISON
+    ═══════════════════════════════════════════ */
+    #value {
+      background: var(--cream-dark);
+      padding: 6rem 0;
+    }
+    .value-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .value-heading {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      color: var(--obsidian);
+      margin-bottom: 1rem;
+    }
+    .value-sub {
+      font-size: 1rem;
+      color: var(--muted);
+      margin-bottom: 3rem;
+    }
+    .value-table {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 2.5rem;
+    }
+    .value-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.1rem 2rem;
+      background: white;
+      border-bottom: 1px solid var(--border);
+      transition: background 0.2s;
+    }
+    .value-row:last-child { border-bottom: none; }
+    .value-row:hover { background: var(--cream); }
+    .value-label { font-size: 0.95rem; color: var(--obsidian); }
+    .value-strike {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #bbb;
+      text-decoration: line-through;
+    }
+    .value-row.highlight {
+      background: var(--obsidian);
+    }
+    .value-row.highlight .value-label { color: white; font-weight: 600; }
+    .value-row.highlight .value-price { color: var(--gold-light); font-size: 1.2rem; font-weight: 700; font-family: 'Playfair Display', serif; }
+
+    /* objection handling */
+    .objections {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      text-align: left;
+      margin-bottom: 3rem;
+    }
+    .objection {
+      padding: 1.25rem 1.5rem;
+      background: white;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+    .objection-q {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--obsidian);
+      margin-bottom: 0.4rem;
+    }
+    .objection-a {
+      font-size: 0.9rem;
+      color: var(--sage-dark);
+      font-style: italic;
+    }
+
+    /* ═══════════════════════════════════════════
+       TRANSFORMATION SECTION
+    ═══════════════════════════════════════════ */
+    #transformation {
+      background: var(--obsidian);
+      padding: 6rem 0;
+      text-align: center;
+    }
+    .transform-heading {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: white;
+      margin-bottom: 1rem;
+    }
+    .transform-heading em { font-style: italic; color: var(--sage-light); }
+    .transform-sub {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.6);
+      max-width: 600px;
+      margin: 0 auto 3rem;
+    }
+    .before-after {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 2rem;
+      align-items: center;
+      max-width: 850px;
+      margin: 0 auto 3.5rem;
+    }
+    .before-col, .after-col {
+      padding: 2rem;
+      border-radius: 10px;
+    }
+    .before-col {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .after-col {
+      background: rgba(135,145,125,0.12);
+      border: 1px solid rgba(135,145,125,0.25);
+    }
+    .ba-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+    .before-col .ba-label { color: rgba(255,255,255,0.4); }
+    .after-col .ba-label { color: var(--sage-light); }
+    .ba-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      text-align: left;
+    }
+    .ba-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-size: 0.9rem;
+    }
+    .before-col .ba-list li { color: rgba(255,255,255,0.55); }
+    .after-col .ba-list li { color: rgba(255,255,255,0.85); }
+    .ba-arrow { color: var(--sage-light); font-size: 1.8rem; }
+    .transform-btns {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ═══════════════════════════════════════════
+       SOCIAL PROOF BANNER
+    ═══════════════════════════════════════════ */
+    .proof-banner {
+      padding: 0.6rem 0;
+      background: var(--obsidian);
+      text-align: center;
+    }
+    .proof-banner p {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--blush-light);
+      letter-spacing: 0.5px;
+    }
+
+    /* ═══════════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════════ */
+    footer {
+      background: var(--obsidian);
+      color: rgba(255,255,255,0.45);
+      padding: 3rem 0;
+      text-align: center;
+      font-size: 0.82rem;
+    }
+    footer a { color: rgba(255,255,255,0.45); text-decoration: underline; }
+    footer a:hover { color: rgba(255,255,255,0.7); }
+
+    /* ═══════════════════════════════════════════
+       MOBILE STICKY CTA
+    ═══════════════════════════════════════════ */
+    .mobile-sticky {
+      display: none;
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      z-index: 999;
+      background: rgba(253,251,247,0.95);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid var(--border);
+      padding: 0.85rem 1rem;
+    }
+    .mobile-sticky a { width: 100%; display: block; text-align: center; }
+
+    /* ═══════════════════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════════════════ */
+    @media (max-width: 900px) {
+      .hero-layout { grid-template-columns: 1fr; gap: 3rem; }
+      .hero-books { height: 420px; } /* Increased from 300px */
+      .book-main { width: 220px; height: 308px; }
+      .book-left { width: 170px; height: 238px; }
+      .book-right { width: 165px; height: 231px; }
+      .products-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+      .solution-pillars { grid-template-columns: 1fr; }
+      .before-after { grid-template-columns: 1fr; gap: 1rem; }
+      .ba-arrow { display: none; }
+    }
+    @media (max-width: 600px) {
+      .section { padding: 4rem 0; }
+      #hero { padding: 4.5rem 0 3rem; }
+      .hero-title { font-size: 2.2rem; }
+      .hero-btns { flex-direction: column; }
+      .hero-btns .btn { text-align: center; }
+      .mobile-sticky { display: block; }
+      body { padding-bottom: 5rem; }
+      .funnel-path { flex-direction: column; gap: 0.3rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ HEADER ═══ -->
+<header>
+  <div class="container header-inner">
+    <a href="#hero" class="logo">
+      <img src="theold.jpg" alt="TheOld952 Logo" class="logo-img">
+      <div class="logo-text">The<span>Old</span>952</div>
+    </a>
+    <a href="#products" class="btn btn-primary header-cta">Start Free →</a>
+  </div>
+</header>
+
+<!-- ═══ SOCIAL PROOF BANNER ═══ -->
+<div class="proof-banner">
+  <p>⚡ Over 5,000+ people started their anxiety detox journey this week</p>
+</div>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-layout">
+
+      <!-- Left: Copy -->
+      <div>
+        <div class="hero-eyebrow fade-up">A Step-by-Step Calm System</div>
+        <h1 class="hero-title fade-up delay-1">
+          Feel Calm Again —<br/>
+          Without <em>Overthinking</em><br/>
+          Everything
+        </h1>
+        <p class="hero-sub fade-up delay-2">
+          Start with a free guided journal, then unlock a proven system to break anxiety loops in minutes. No more spirals. Just peace.
+        </p>
+        <div class="hero-btns fade-up delay-3">
+          <a href="#product-free" class="btn btn-sage">Get Free Journal →</a>
+          <a href="#products" class="btn btn-outline">See Full System</a>
+        </div>
+        <div class="hero-social-proof fade-up delay-4">
+          <span class="proof-dot"></span>
+          5,000+ downloads this week &nbsp;·&nbsp; Instant digital access
+        </div>
+      </div>
+
+      <!-- Right: Floating Book Stack -->
+      <div class="hero-books fade-up delay-2">
+        <div class="hero-book book-left">
+          <img src="3.png" alt="The Comfort Journal — Free" />
+        </div>
+        <div class="hero-book book-main">
+          <img src="1.png" alt="How to Stop Overthinking — $9.99" />
+        </div>
+        <div class="hero-book book-right">
+          <img src="2.png" alt="The Anxiety Detox — $4.99" />
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PAIN SECTION ═══ -->
+<section id="pain" style="background:#fff;">
+  <div class="container">
+    <div class="pain-inner">
+      <h2 class="pain-heading">
+        You're not just<br/><em>"thinking too much"…"</em>
+      </h2>
+      <p class="pain-intro">
+        You're emotionally stuck in a loop. Every day feels like wading through the same thoughts, the same fears, the same exhausting spiral.
+      </p>
+      <ul class="pain-list">
+        <li>
+          <span class="pain-icon">💭</span>
+          <span>Overanalyzing texts, silence, and tone — searching for hidden meaning</span>
+        </li>
+        <li>
+          <span class="pain-icon">🔄</span>
+          <span>Constant "what if" thoughts that you can't shut off</span>
+        </li>
+        <li>
+          <span class="pain-icon">😮‍💨</span>
+          <span>Needing reassurance again and again, yet never feeling settled</span>
+        </li>
+        <li>
+          <span class="pain-icon">🪫</span>
+          <span>Feeling completely drained… every single day</span>
+        </li>
+      </ul>
+      <a href="#products" class="btn btn-sage" style="font-size:0.95rem;">I want to feel free →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SOLUTION ═══ -->
+<section id="solution" style="background:var(--cream);">
+  <div class="container">
+    <div class="solution-inner">
+      <p class="section-label">The System</p>
+      <h2 class="solution-heading">What if you could finally…</h2>
+      <p class="solution-sub">
+        This system is designed to give you immediate relief — and long-term emotional freedom.
+      </p>
+      <div class="solution-pillars">
+        <div class="pillar">
+          <img src="clarity.png" alt="Mental Clarity" class="pillar-img">
+          <h4>Understand Your Emotions</h4>
+          <p>See the root of your anxiety clearly — without judgment</p>
+        </div>
+        <div class="pillar">
+          <img src="serenity.png" alt="Serenity" class="pillar-img">
+          <h4>Calm Your Mind Instantly</h4>
+          <p>A 5-minute reset you can use anywhere, anytime</p>
+        </div>
+        <div class="pillar">
+          <img src="protection.png" alt="Protection" class="pillar-img">
+          <h4>Stop the Spiral</h4>
+          <p>Interrupt the loop before it takes over your day</p>
+        </div>
+      </div>
+      <div class="funnel-path">
+        <span class="funnel-step">Start free</span>
+        <span class="funnel-arrow">→</span>
+        <span class="funnel-step">Experience clarity</span>
+        <span class="funnel-arrow">→</span>
+        <span class="funnel-step">Upgrade to control</span>
+        <span class="funnel-arrow">→</span>
+        <span class="funnel-step accent">Master your mind</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PRODUCTS ═══ -->
+<section id="products" style="background:#fff;">
+  <div class="container">
+    <div class="products-header">
+      <p class="section-label">Your Path to Calm</p>
+      <h2 class="products-heading">Choose Where to Begin</h2>
+      <p class="products-sub">Start free, experience results, then unlock the full system when you're ready.</p>
+    </div>
+
+    <div class="products-grid">
+
+      <!-- ── TIER 1: FREE ── -->
+      <div class="product-card" id="product-free">
+        <span class="tier-badge tier-free">Free</span>
+        <div class="product-image-wrap">
+          <img src="3.png" alt="The Comfort Journal" />
+        </div>
+        <div class="product-body">
+          <div>
+            <span class="price-label" style="font-size:0.78rem;color:var(--muted);font-weight:500;">Entry Point</span>
+            <div class="product-price" style="color:var(--sage-dark);">FREE</div>
+          </div>
+          <h3 class="product-name">The Comfort Journal</h3>
+          <p class="product-tagline">7-Day Journaling Prompts for Relationship Anxiety</p>
+          <ul class="product-features">
+            <li><span class="check">✓</span> 7 days of guided prompts</li>
+            <li><span class="check">✓</span> Emotional clarity exercises</li>
+            <li><span class="check">✓</span> Deep self-understanding tools</li>
+          </ul>
+          <div class="product-transform">From confusion → clarity</div>
+          <a href="#" class="btn btn-sage product-cta" id="cta-free">Download Free Journal →</a>
+        </div>
+      </div>
+
+      <!-- ── TIER 2: $4.99 ── -->
+      <div class="product-card" id="product-mid">
+        <span class="tier-badge tier-mid">$4.99</span>
+        <div class="product-image-wrap">
+          <img src="2.png" alt="The Anxiety Detox" />
+        </div>
+        <div class="product-body">
+          <div>
+            <span class="price-label" style="font-size:0.78rem;color:var(--muted);font-weight:500;">Core System</span>
+            <div class="product-price">$4.99</div>
+          </div>
+          <h3 class="product-name">The Anxiety Detox</h3>
+          <p class="product-tagline">24-Hour Relief Guide — Stop the Spiral Right Now</p>
+          <ul class="product-features">
+            <li><span class="check">✓</span> Complete overthinking elimination system</li>
+            <li><span class="check">✓</span> Attachment theory (simplified)</li>
+            <li><span class="check">✓</span> Real-life communication scripts</li>
+            <li><span class="check">✓</span> Emotional regulation frameworks</li>
+          </ul>
+          <div class="product-transform">You become calm, secure, and in control</div>
+          <a href="#" class="btn btn-primary product-cta" id="cta-mid">BUY NOW — $4.99</a>
+        </div>
+      </div>
+
+      <!-- ── TIER 3: $9.99 FLAGSHIP ── -->
+      <div class="product-card flagship" id="product-flagship">
+        <div class="flagship-ribbon">🔥 Most Popular — Flagship</div>
+        <span class="tier-badge tier-flagship">$9.99</span>
+        <div class="product-image-wrap">
+          <img src="1.png" alt="How to Stop Overthinking & Reclaim Your Worth" />
+        </div>
+        <div class="product-body">
+          <div>
+            <span class="price-label" style="font-size:0.78rem;color:var(--muted);font-weight:500;">Full Transformation</span>
+            <div class="product-price" style="color:var(--gold);">$9.99</div>
+          </div>
+          <h3 class="product-name">How to Stop Overthinking & Reclaim Your Worth</h3>
+          <p class="product-tagline">The Complete Guide to Attachment Theory, Secure Communication & Emotional Security</p>
+          <ul class="product-features">
+            <li><span class="check">✓</span> Attachment Theory (Simplified)</li>
+            <li><span class="check">✓</span> Secure Communication Scripts</li>
+            <li><span class="check">✓</span> Emotional Security Framework</li>
+            <li><span class="check">✓</span> Break Dependency Loops</li>
+            <li><span class="check">✓</span> Secure Attachment Blueprint</li>
+          </ul>
+          <div class="product-transform">You become secure, confident & clear</div>
+          <a href="#" class="btn btn-gold product-cta" id="cta-flagship">BUY NOW — $9.99</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ VALUE COMPARISON ═══ -->
+<section id="value">
+  <div class="container">
+    <div class="value-inner">
+      <p class="section-label">Why This Works</p>
+      <h2 class="value-heading">Mental peace shouldn't be expensive</h2>
+      <p class="value-sub">Compare what you'd pay elsewhere vs. your path with us.</p>
+
+      <div class="value-table">
+        <div class="value-row">
+          <span class="value-label">Therapy session</span>
+          <span class="value-strike">$50 / session</span>
+        </div>
+        <div class="value-row">
+          <span class="value-label">Online anxiety courses</span>
+          <span class="value-strike">$100+</span>
+        </div>
+        <div class="value-row">
+          <span class="value-label">Books & workbooks</span>
+          <span class="value-strike">$20–$40 each</span>
+        </div>
+        <div class="value-row highlight">
+          <span class="value-label">Your complete anxiety detox</span>
+          <span class="value-price">Start FREE → $9.99 max</span>
+        </div>
+      </div>
+
+      <div class="objections">
+        <div class="objection">
+          <div class="objection-q">💬 "Is the free journal enough?"</div>
+          <div class="objection-a">→ It gives you clarity… but not full control. It's your starting point.</div>
+        </div>
+        <div class="objection">
+          <div class="objection-q">💬 "Is $4.99 really worth it?"</div>
+          <div class="objection-a">→ One anxiety-free day is worth more than that. We're not kidding.</div>
+        </div>
+        <div class="objection">
+          <div class="objection-q">💬 "Why only $9.99 for the full system?"</div>
+          <div class="objection-a">→ Because mental peace shouldn't be expensive. Period.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TRANSFORMATION ═══ -->
+<section id="transformation">
+  <div class="container">
+    <p class="section-label" style="color:var(--sage-light);">After The System</p>
+    <h2 class="transform-heading">
+      No more spirals.<br/><em>Just you, calm and free.</em>
+    </h2>
+    <p class="transform-sub">
+      Here's what life looks like on the other side of the anxiety loop.
+    </p>
+
+    <div class="before-after">
+      <div class="before-col">
+        <div class="ba-label">Before</div>
+        <ul class="ba-list">
+          <li><span style="color:rgba(255,255,255,0.3);">✕</span> Constantly overanalyzing</li>
+          <li><span style="color:rgba(255,255,255,0.3);">✕</span> Needing constant reassurance</li>
+          <li><span style="color:rgba(255,255,255,0.3);">✕</span> Emotional dependency</li>
+          <li><span style="color:rgba(255,255,255,0.3);">✕</span> Anxiety loops every day</li>
+          <li><span style="color:rgba(255,255,255,0.3);">✕</span> Feeling drained</li>
+        </ul>
+      </div>
+      <div class="ba-arrow">→</div>
+      <div class="after-col">
+        <div class="ba-label">After</div>
+        <ul class="ba-list">
+          <li><span style="color:var(--sage-light);">✓</span> No more constant overthinking</li>
+          <li><span style="color:var(--sage-light);">✓</span> Grounded and self-assured</li>
+          <li><span style="color:var(--sage-light);">✓</span> Emotionally independent</li>
+          <li><span style="color:var(--sage-light);">✓</span> Calm, clear mind</li>
+          <li><span style="color:var(--sage-light);">✓</span> Secure and in control</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="transform-btns">
+      <a href="#product-free" class="btn btn-sage" id="cta-final-free">Get Free Journal</a>
+      <a href="#product-flagship" class="btn btn-gold" id="cta-final-flagship">BUY NOW — $9.99</a>
+    </div>
+
+    <p style="margin-top:1.5rem;font-size:0.82rem;color:rgba(255,255,255,0.35);">
+      You can stay stuck in your thoughts… or finally feel free.
+    </p>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="container">
+    <div style="display:flex; align-items:center; justify-content:center; gap:0.5rem; margin-bottom:1rem;">
+       <img src="theold.jpg" alt="TheOld952" style="width:24px; height:24px; border-radius:50%; object-fit:cover;">
+       <p style="font-family:'Playfair Display',serif;font-size:1.2rem;color:rgba(255,255,255,0.7); font-weight:700;">TheOld952</p>
+    </div>
+    <p style="margin-bottom:0.75rem;">© 2026 TheOld952. All rights reserved. · Instant digital access · No subscription.</p>
+    <p>
+      <a href="#">Privacy Policy</a> &nbsp;·&nbsp;
+      <a href="#">Terms of Service</a> &nbsp;·&nbsp;
+      <a href="#">Contact</a>
+    </p>
+  </div>
+</footer>
+
+<!-- ═══ MOBILE STICKY CTA ═══ -->
+<div class="mobile-sticky">
+  <a href="#product-free" class="btn btn-primary">Get Free Journal →</a>
+</div>
+
+</body>
+</html>
